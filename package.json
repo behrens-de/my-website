@@ -4,7 +4,7 @@
   "description": "My personal Website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "sass ./sources/sass/style.sass ./public/style.css --no-source-map  "
   },
   "keywords": ["Website","Homepage"],
   "author": "Jan P. Behrens",
