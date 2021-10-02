@@ -1,0 +1,63 @@
+// Variables
+$box-shadow: 6px 6px 0px 1px rgba(0 0 0 / .25) 
+$text-shadow: 1px 1px 1px rgba(0,0,0,.7)
+$transform : rotate(-3deg)
+$color-1: rgb(65, 100, 98, 1)
+$color-2: rgba(65, 100, 98 , .5)
+$color-2a:rgba(252, 252, 252)
+  
+// First-Screen
+.first-screen
+    height: 100vh
+    width: 100vw
+    display: flex
+    flex-direction: column
+    background: green
+    justify-content: center
+    align-items: center
+    background: linear-gradient(90deg, $color-1 0%, $color-2 100%), url('./img/jan_behrens_2021_profilbild.jpg') 50% 50% no-repeat
+    background-size: cover
+    font-family: 'Open Sans', sans-serif
+    position: fixed
+    top: 0
+    left: 0
+    z-index: -1
+    transition: all .001s
+    img
+        width: calc(100% / 2.5)
+        max-width: 180px
+        height: auto
+        border: .25rem solid #fff
+        box-shadow: $box-shadow
+        border-radius:  1rem 0
+    .my-name
+        color: rgba(255, 255, 255, 1)
+        opacity: .7
+        font-size: 1.6rem
+        padding: .7rem 1.6rem
+        margin: .5rem 0 0 0
+        font-weight: 100
+        text-shadow: $text-shadow
+    .my-job
+        color:#fff
+        border: 1px solid $color-2a
+        font-size: 1.3rem
+        padding: .7rem 1.6rem
+        max-width: calc(100% - 4rem)
+        text-align: center
+        transform: $transform
+        background: $color-2
+        box-shadow: $box-shadow
+        border-radius: 1rem 0
+        font-weight: 300
+        outline: 2px solid $color-2
+        text-shadow: $text-shadow
+
+    .my-city
+        color: rgba(255, 255, 255, 0.5)
+        font-size: 1.25rem
+        margin-top: 1rem
+        font-weight: 100
+        &::before
+            content: 'aus '
+

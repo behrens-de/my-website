@@ -4,9 +4,12 @@
   "description": "My personal Website",
   "main": "index.js",
   "scripts": {
-    "dev": "sass ./sources/sass/style.sass ./public/style.css --no-source-map  "
+    "_sass": "sass ./sources/sass/style.sass ./public/style.css --no-source-map -w"
   },
-  "keywords": ["Website","Homepage"],
+  "keywords": [
+    "Website",
+    "Homepage"
+  ],
   "author": "Jan P. Behrens",
   "license": "MIT"
 }
