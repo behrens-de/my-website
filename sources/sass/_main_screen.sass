@@ -22,30 +22,49 @@ $color-1: rgb(65, 100, 98, 1)
         border-bottom: 2px solid rgba(0, 0, 0, 0.05)
         top: 0
         left: 0
-        span
+        div
             display: flex
             align-items: center
             padding: 0 1rem
             color: $color-1
             font-weight: 500
         ul
-            margin: .25rem
+            margin: .5rem
             padding: 0
             display: flex
+            overflow: hidden
             li
                 list-style: none
                 margin: none
                 padding: none
+                display: flex
+                align-items: center
                 a
                     display: block
-                    padding: .5rem 1rem
-                    background: rgba(0,0,0,.3)
-                    margin: .25rem
+                    padding: .5rem
                     color: white
+                    margin-left: .5rem
                     text-decoration: none
+                    color: #999
+                    background: rgba(0,0,0,.05)
+                    &.active
+                        background: rgba(0,0,0,.05)
+                        color: #555
+                    &.contact, &.contact:hover
+                        background: $color-1
+                        color: white
+                        border: none
+                    &:hover
+                        background: rgba(0,0,0,.05)
+                        
     footer
         background: $color-1
         color: rgba(255, 255, 255, 0.3)
         padding: .5rem 0
         text-align: center
         font-size: 80%
+.size
+    width: 500px
+    background: green
+    max-width: 100%
+    aspect-ratio: 16/9

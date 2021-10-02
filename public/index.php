@@ -17,18 +17,21 @@ print $html["header"]->render(); ?>
 
 <main class="main-screen">
     <nav class="main-nav">
-        <span>
+        <div class="company-name">
             JP Behrens
-        </span>
-        <ul>
-            <li><a href="">Link 1</a></li>
-            <li><a href="">Link 2</a></li>
-            <li><a href="">Link 3</a></li>
-            <li><a href="">Link 4</a></li>
+        </div>
+        <ul class="top-menu">
+            <li><a href="" class="active">Home</a></li>
+            <li><a href="">Über mich</a></li>
+            <li><a href="">Webseiten</a></li>
+            <li><a href="">Analysen</a></li>
+            <li><a href="">Beratung</a></li>
+            <li><a href="" class="contact">Kontakt</a></li>
         </ul>
     </nav>
     <section style="min-height: 80vh;">
         <h1>Hello World!</h1>
+        <div class="size"></div>
     </section>
     <section style="min-height: 80vh;">
         <h1>Hello World!</h1>
