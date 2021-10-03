@@ -1,7 +1,6 @@
 $color-1: rgb(65, 100, 98, 1)
 
 .main-screen
-    font-family: 'Open Sans', sans-serif
     margin: auto
     margin-top: 100vh
     min-height: 100vh
@@ -13,21 +12,26 @@ $color-1: rgb(65, 100, 98, 1)
     justify-content: space-between
     background: white
     section
-        flex-grow:1
+        flex-grow:1       
     nav
         display: flex
+        z-index: 8000
         justify-content: space-between
         background: white
         position: sticky
+        z-index: 9000
         border-bottom: 2px solid rgba(0, 0, 0, 0.05)
         top: 0
         left: 0
+    @media screen and (min-width: 800px)    
         div
             display: flex
             align-items: center
             padding: 0 1rem
             color: $color-1
-            font-weight: 500
+            font-weight: 500 
+        #toggle-nav
+            display: none
         ul
             margin: .5rem
             padding: 0
@@ -56,7 +60,62 @@ $color-1: rgb(65, 100, 98, 1)
                         border: none
                     &:hover
                         background: rgba(0,0,0,.05)
-                        
+
+    @media screen and (max-width: 799px)    
+        div
+            display: flex
+            align-items: center
+            padding: 1rem
+            color: $color-1
+            font-weight: 500 
+        #toggle-nav
+            position: absolute
+            right: 0
+            background: gray
+            height: 100%
+        ul
+            margin: 0
+            padding: 0
+            display: flex
+            overflow: hidden
+            flex-direction: column
+            z-index: 9999
+            position: fixed
+            height: 100vh
+            width: 80vw
+            right: -80vw
+            top: 0
+            margin: 0
+            background: green
+            justify-content: center
+            li
+                list-style: none
+                margin: none
+                padding: none
+                display: flex
+                width: 100%
+                align-items: center
+                a
+                    display: block
+                    width: 100%
+                    padding: 2rem
+                    color: white
+                    text-align: center
+                    text-decoration: none
+                    color: #999
+                    background: rgba(0,0,0,.05)
+                    &.active
+                        background: rgba(0,0,0,.05)
+                        color: #555
+                    &.contact, &.contact:hover
+                        background: $color-1
+                        color: white
+                        border: none
+                    &:hover
+                        background: rgba(0,0,0,.05)      
+
+
+
     footer
         background: $color-1
         color: rgba(255, 255, 255, 0.3)
