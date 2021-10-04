@@ -1,10 +1,11 @@
 @use '_variables' as *
+@use '_media_querys' as mq
 
 // body
 body
     font-family: $primary-font-family
 // Headlines
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6     
     margin: 0
     font-weight: 300
     color: $primary-color
@@ -23,3 +24,7 @@ p
     color: $text-dark
     font-size: 1rem
     line-height: 160%
+
+    @include mq.screen($phone)
+        background: green
+    
