@@ -257,6 +257,11 @@ p {
   font-size: 1rem;
   line-height: 160%;
 }
+@media screen and (min-width: 36rem) {
+  p {
+    background: green;
+  }
+}
 
 .first-screen {
   height: 100vh;
